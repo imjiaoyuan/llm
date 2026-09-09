@@ -45,5 +45,8 @@ python .github/ci_repl.py target/debug/llm   # CI interactive REPL over a real p
 - Commits: imperative, lowercase, no prefix ("add interactive agent repl with slash commands"), one
   focused change each. PRs target `main`; releases are cut from `v*` tags by
   `.github/workflows/release.yml`.
+- Extensions are the plugin surface: the wire protocol and manifest reference is
+  `docs/extensions.md`, runnable examples live in `examples/extensions/` (`wordcount`,
+  `websearch`, `todo` — a port of pi's official todo.ts); refresh both when the host changes.
 - Behavioral references live **outside** this repo in `~/work/references/` — read-only, never edit
   or build them.
