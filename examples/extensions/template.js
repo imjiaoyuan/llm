@@ -5,7 +5,7 @@
 // written in pi's extension API style (registerTool / registerCommand /
 // on(event)), which maps onto it directly.
 
-// ---------------------------------------------------------------- protocol --
+// protocol
 const TOOLS = {};    // name -> {description, parameters, execute}
 // seconds to ask the host for your own call deadline (it defaults to 120s);
 // raise it for a tool that runs a build or another agent
@@ -17,7 +17,7 @@ function reply(obj) {
   process.stdout.write(JSON.stringify(obj) + "\n");
 }
 
-// ---------------------------------------------------------------- pi shim ---
+// pi shim
 // The subset of pi's extension API that can be honored out-of-process:
 // tools, slash commands, and event hooks. UI / editor / hotkey APIs are
 // not available and calling them raises with a clear message.
@@ -126,7 +126,7 @@ async function dispatch(line) {
   }
 }
 
-// ---------------------------------------------------------- USER SECTION ----
+// USER SECTION
 // pi-style extension code goes here. Examples:
 
 pi.registerTool({
